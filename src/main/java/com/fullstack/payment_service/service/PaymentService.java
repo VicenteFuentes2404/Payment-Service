@@ -13,10 +13,18 @@ public class PaymentService {
     @Autowired 
     private PaymentRepository repo;
 
+    /* 
     public String create(Payment p) {
         repo.save(p); 
         return "Pago procesado correctamente";
     }
+  */
+
+    public String create(Payment p) {
+    repo.save(p);
+    return "OK";
+}
+
     public List<Payment> findAll()  { 
         return repo.findAll(); }
         
